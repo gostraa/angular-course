@@ -1,0 +1,44 @@
+# Dependency directories
+node_modules/
+bower_components/
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Angular specific
+dist/
+tmp/
+out-tsc/
+.angular
+
+# Logs and reports
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+report.[0-9]*.[0-9]*.[0-9]*.json
+
+# Compiled files
+*.map
+*.cache
+
+# Service worker files
+ngsw-config.json
+
+# Misc
+.sass-cache/
+connect.lock
+coverage/
+libpeerconnection.log
+testem.log
+karma-coverage/
+typings/
