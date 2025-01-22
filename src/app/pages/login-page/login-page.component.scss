@@ -1,0 +1,14 @@
+:host {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100dvh;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5%;
+}
+:host > * {
+  width: 100%;
+  max-width: 440px;
+  justify-self: center;
+  align-self: center;
+}
