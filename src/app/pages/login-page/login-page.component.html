@@ -1,13 +1,23 @@
-<form action="" class="login-form">
+<form class="login-form" [formGroup]="form" (ngSubmit)="onSubmit()">
   <h1 class="h1 mb60">Log In</h1>
   <label class="tt-control-label mb16">
     Telegram username
-    <input class="tt-input" type="text" placeholder="Enter Username" />
+    <input
+      formControlName="username"
+      class="tt-input"
+      type="text"
+      placeholder="Enter Username"
+    />
   </label>
   <label class="tt-control-label mb32">
     Password
-    <input class="tt-input" type="text" placeholder="Enter Password" />
+    <input
+      formControlName="password"
+      class="tt-input"
+      type="text"
+      placeholder="Enter Password"
+    />
   </label>
-  <button class="btn btn-shadow">Log In</button>
+  <button class="btn btn-shadow" type="submit">Log In</button>
 </form>
 <img src="/assets/svg/large-logo.svg" alt="logo" />
