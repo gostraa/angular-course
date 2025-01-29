@@ -19,11 +19,11 @@ export const authTokenInterceptor: HttpInterceptorFn = (req, next) => {
   if (isRefreshing) {
     return refreshAndProcced(authService, req, next);
   }
-  req = req.clone({
-    setHeaders: {
-      Authorization: `Bearer ${token}`,
-    },
-  });
+  // req = req.clone({
+  //   setHeaders: {
+  //     Authorization: `Bearer ${token}`,
+  //   },
+  // });
 
   return next(addToken(req, token)).pipe(
     catchError((error) => {

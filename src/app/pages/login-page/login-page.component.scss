@@ -12,3 +12,22 @@
   justify-self: center;
   align-self: center;
 }
+
+.password-input {
+  position: relative;
+}
+
+.password-eye-button {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translate(-50%);
+  background: none;
+  border: none;
+  color: #ffffffbf;
+  cursor: pointer;
+}
+
+.password-eye-button.active {
+  color: var(--primary-color);
+}
