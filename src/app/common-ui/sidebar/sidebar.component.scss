@@ -22,6 +22,7 @@
   font-weight: 700;
   line-height: 24px;
   text-align: left;
+  text-decoration: none;
   border: none;
   cursor: pointer;
   border-radius: 2px;
@@ -39,4 +40,41 @@
 .menu-item svg {
   width: 16px;
   height: 16px;
+}
+
+.to-subscribers {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.to-subscribers-link {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.to-subscribers-icon {
+  width: 18px;
+  height: 18px;
+  color: var(--primary-color);
+}
+
+.sidebar__footer {
+  background: var(--dark-hover-color);
+  border-radius: 2px;
+  padding: 4px 16px;
+  display: grid;
+  grid-template-columns: 32px 1fr 16px;
+  grid-gap: 12px;
+  align-items: center;
+  img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50px;
+  }
+}
+
+.username-text {
+  font-weight: 700;
+  color: var(--primary-color);
 }

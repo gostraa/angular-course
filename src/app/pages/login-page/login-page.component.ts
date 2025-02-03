@@ -29,11 +29,13 @@ export class LoginPageComponent {
   onSubmit() {
     if (this.form.valid) {
       console.log(this.form.value);
-      //@ts-ignore
-      this.authService.login(this.form.value).subscribe((response) => {
-        this.router.navigate(['']);
-        console.log(response);
-      });
+
+      this.authService
+        .login(this.form.value as { username: string; password: string })
+        .subscribe((response) => {
+          this.router.navigate(['']);
+          console.log(response);
+        });
     }
   }
 }

@@ -11,3 +11,29 @@
     }
   </ul>
 </nav>
+
+<p class="medium-text mb20">Subscribers</p>
+
+@for (profile of subscribers$ | async ; track profile ){
+<app-subscriber-card [profile]="profile"></app-subscriber-card>
+}
+
+<div class="mt20 to-subscribers">
+  <a [routerLink]="['/subscribers']" class="to-subscribers-link medium-text"
+    >All Subscribers</a
+  >
+  <svg icon="arrow-right" class="to-subscribers-icon"></svg>
+</div>
+
+<footer class="sidebar__footer">
+  @if(me(); as me) { @if(me.avatarUrl){
+
+  <img [src]="me.avatarUrl | imgUrl" alt="" />
+
+  }@else {
+
+  <img [src]="me.avatarUrl | imgUrl" alt="" />
+  }
+  <div class="medium-text username-text">{{ me.username }}</div>
+  }
+</footer>
