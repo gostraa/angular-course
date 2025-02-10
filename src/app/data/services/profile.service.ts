@@ -25,15 +25,15 @@ export class ProfileService {
       .pipe(tap((res) => this.me.set(res)));
   }
 
-  // getAccount() {
-  //   return this.http.get<Profile>(`${this.baseApiUrl}account/${id}`);
-  // }
+  getAccount(id: string) {
+    return this.http.get<Profile>(`${this.baseApiUrl}account/${id}`);
+  }
+
   getSubscribersShortList() {
     const res = this.http
       .get<Pageble<Profile>>(`${this.baseApiUrl}account/subscribers/`)
       .pipe(map((res) => res.items.slice(0, 3)));
 
-    console.log(res);
     return res;
   }
 }
