@@ -6,4 +6,31 @@
     <svg icon="settings" class="to-settings-icon"></svg>
   </a>
 </header>
+<main class="profile-page__body">
+  <app-post-feed></app-post-feed>
+  <div>
+    <h3 class="h6 mb16">Subscribers</h3>
+    <div class="subscribers-wapper mb32">
+      @for (subscriber of subscribers$ | async ; track subscriber.id ){
+      <a
+        class="subscriber-avatar-btn"
+        [routerLink]="['profile', subscriber.id]"
+      >
+        <img [src]="subscriber.avatarUrl | imgUrl" alt="avatar" />
+      </a>
+      }
+      <a class="to-subscribers-search" [routerLink]="['/search']"> </a>
+    </div>
+    <h3 class="h6 mb16">Skills</h3>
+    <div class="stack-wapper mb32">
+      @for (skill of ['HTML','CSS','JavaScript','React','Next.js','Angular'] ;
+      track skill ){
+      <div class="skill-tag">{{ skill }}</div>
+      }
+    </div>
+
+    <h3 class="h6 mb16">About</h3>
+    <p class="medium-text">{{ profile.description }}</p>
+  </div>
+</main>
 }
